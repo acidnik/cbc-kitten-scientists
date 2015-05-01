@@ -123,6 +123,12 @@ var message = function () {
     var args = Array.prototype.slice.call(arguments);
     args[1] = args[1] || 'ks-default';
 
+    var year = gamePage.calendar.year;
+    var season = gamePage.calendar.season;
+    var day = gamePage.calendar.day;
+    var prefix = "[" + season + " of " + year + ", day " + day + "] ";
+    args[1] = prefix + args;
+
     // update the color of the message immediately after adding
     gameLog.msg.apply(gameLog, args);
     $('.type_' + args[1]).css('color', options.color);
@@ -500,12 +506,12 @@ TradeManager.prototype = {
 var container = $('#game');
 var column = $('.column');
 
-container.css({
-    fontFamily: 'Courier New',
-    fontSize: '12px',
-    minWidth: '1300px',
-    top: '32px'
-});
+// container.css({
+//     fontFamily: 'Courier New',
+//     fontSize: '12px',
+//     minWidth: '1300px',
+//     top: '32px'
+// });
 
 column.css({
     minHeight: 'inherit',
@@ -551,12 +557,12 @@ addRule('#resContainer .maxRes {'
 + 'color: #676766;'
 + '}');
 
-addRule('#game .btn {'
-+ 'border-radius: 0px;'
-+ 'font-family: "Courier New";'
-+ 'font-size: "10px";'
-+ 'margin: 0 0 7px 0;'
-+ '}');
+// addRule('#game .btn {'
+// + 'border-radius: 0px;'
+// + 'font-family: "Courier New";'
+// + 'font-size: "10px";'
+// + 'margin: 0 0 7px 0;'
+// + '}');
 
 addRule('#ks-options ul {'
 + 'list-style: none;'

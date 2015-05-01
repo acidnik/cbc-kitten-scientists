@@ -6,7 +6,7 @@ Kitten Scientists is a simple automation script for the complex kittens. [Kitten
 
 Create the following JavaScript bookmarklet (create a new bookmark and past this as the URL):
 
-    javascript:(function(){var d=document,s=d.createElement('script');s.src='https://rawgit.com/cameroncondry/cbc-kitten-scientists/master/kitten-scientists.js';d.body.appendChild(s);})();
+    javascript:(function(){var d=document,s=d.createElement('script');s.src='https://rawgit.com/acidnik/cbc-kitten-scientists/master/kitten-scientists.js';d.body.appendChild(s);})();
 
 ## Functionality
 
