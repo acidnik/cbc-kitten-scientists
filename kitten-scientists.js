@@ -12,7 +12,7 @@ var options = {
     consume: 0.5,
     auto: {
         engine: {enabled: false},
-        faith: {enabled: true, trigger: 0.99},
+        faith: {enabled: true, trigger: 0.01},
         festival: {enabled: true},
         hunt: {enabled: true, trigger: 0.95},
         build: {
@@ -124,11 +124,10 @@ var message = function () {
     args[1] = args[1] || 'ks-default';
 
     var year = gamePage.calendar.year;
-    var season = gamePage.calendar.seasons[gamePage.calendar.season];
+    var season = gamePage.calendar.seasons[gamePage.calendar.season].title;
     var day = Math.floor(gamePage.calendar.day);
-    var prefix = "[" + season + " of " + year + ", day " + day + "] ";
+    var prefix = "[" + year + " year, " + season + ", day " + day + "] ";
     args[0] = prefix + args;
-    // console.log(args);
 
     // update the color of the message immediately after adding
     gameLog.msg.apply(gameLog, args);
@@ -238,7 +237,8 @@ Engine.prototype = {
             // Generate luxury goods before sending hunters
             this.craftType('luxury');
 
-            game.village.huntAll();
+            // game.village.huntAll();
+            game.village.sendHunters(1);
             message('Hunters have been deployed!');
         }
     },
