@@ -130,7 +130,7 @@ var message = function () {
     args[0] = prefix + args;
 
     // update the color of the message immediately after adding
-    gameLog.msg.apply(gameLog, args[0]);
+    gameLog.msg.apply(gameLog, args);
     $('.type_' + args[1]).css('color', options.color);
 };
 
