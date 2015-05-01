@@ -124,10 +124,11 @@ var message = function () {
     args[1] = args[1] || 'ks-default';
 
     var year = gamePage.calendar.year;
-    var season = gamePage.calendar.season;
-    var day = gamePage.calendar.day;
+    var season = gamePage.calendar.seasons[gamePage.calendar.season];
+    var day = Math.floor(gamePage.calendar.day);
     var prefix = "[" + season + " of " + year + ", day " + day + "] ";
-    args[1] = prefix + args;
+    args[0] = prefix + args;
+    // console.log(args);
 
     // update the color of the message immediately after adding
     gameLog.msg.apply(gameLog, args);
