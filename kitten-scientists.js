@@ -130,7 +130,7 @@ var message = function () {
     args[0] = prefix + args;
 
     // update the color of the message immediately after adding
-    gameLog.msg.apply(gameLog, args);
+    gameLog.msg.apply(gameLog, args[0]);
     $('.type_' + args[1]).css('color', options.color);
 };
 
@@ -201,6 +201,10 @@ Engine.prototype = {
         for (var name in crafts) {
             var craft = crafts[name];
             var require = !craft.require ? false : manager.getResource(craft.require);
+
+            if (name == 'plate') {
+                console.log(['require', require, 'trigger', trigger]);
+            }
 
             if (craft.type === type && (!require || trigger <= require.value / require.maxValue)) {
                 manager.craft(name, manager.getLowestCraftAmount(name));
