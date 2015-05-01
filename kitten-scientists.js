@@ -256,7 +256,7 @@ Engine.prototype = {
         if (origTab != gamePage.activeTabId) {
             gamePage.activeTabId = origTab; gamePage.render();
         }
-    }
+    },
     startTrade: function () {
         var craftManager = this.craftManager;
         var tradeManager = this.tradeManager;
