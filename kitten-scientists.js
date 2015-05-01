@@ -242,10 +242,21 @@ Engine.prototype = {
             this.craftType('luxury');
 
             // game.village.huntAll();
-            game.village.sendHunters(1);
+            // game.village.sendHunters(1);
+            this.huntOnce();
             message('Hunters have been deployed!');
         }
     },
+    huntOnce: function() {
+        var origTab = gamePage.activeTabId;
+        if (!(gamePage.villageTab.huntBtn && gamePage.villageTab.huntBtn.onClick)) {
+            gamePage.activeTabId = gamePage.villageTab.tabId; gamePage.render();
+        }
+        gamePage.villageTab.huntBtn.onClick();
+        if (origTab != gamePage.activeTabId) {
+            gamePage.activeTabId = origTab; gamePage.render();
+        }
+    }
     startTrade: function () {
         var craftManager = this.craftManager;
         var tradeManager = this.tradeManager;
