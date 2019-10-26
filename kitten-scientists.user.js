@@ -2190,7 +2190,7 @@ var run = function() {
 
     addRule(defaultSelector + ' #game {'
         // + 'font-family: monospace;'
-        + 'font-size: 12px;'
+        // + 'font-size: 12px;'
         + 'min-width: 1300px;'
         + 'top: 32px;'
         + '}');
