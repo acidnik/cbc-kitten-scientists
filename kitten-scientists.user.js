@@ -340,17 +340,17 @@ var run = function() {
                 enabled: false,
                 items: {
                     // class="msg type_ks-activity type_ks-craft"
-                    buildFilter:     {enabled: false, filter: true, label: 'Building',            variant: "type_ks-activity type_ks-build"},
-                    craftFilter:     {enabled: false, filter: true, label: 'Crafting',            variant: "type_ks-activity type_ks-craft"},
-                    upgradeFilter:   {enabled: false, filter: true, label: 'Upgrading',           variant: "type_ks-activity type_ks-upgrade"},
-                    researchFilter:  {enabled: false, filter: true, label: 'Researching',         variant: "type_ks-activity type_ks-research"},
-                    tradeFilter:     {enabled: false, filter: true, label: 'Trading',             variant: "type_ks-activity type_ks-trade"},
-                    huntFilter:      {enabled: false, filter: true, label: 'Hunting',             variant: "type_ks-activity type_ks-hunt"},
-                    praiseFilter:    {enabled: false, filter: true, label: 'Praising',            variant: "type_ks-activity type_ks-praise"},
-                    faithFilter:     {enabled: false, filter: true, label: 'Order of the Sun',    variant: "type_ks-activity type_ks-faith"},
-                    festivalFilter:  {enabled: false, filter: true, label: 'Festivals',           variant: "type_ks-activity type_ks-festival"},
-                    starFilter:      {enabled: false, filter: true, label: 'Astronomical Events', variant: "type_ks-activity type_ks-star"},
-                    miscFilter:      {enabled: false, filter: true, label: 'Miscellaneous',       variant: "type_ks-activity"}
+                    buildFilter:     {enabled: false, filter: true, label: 'Building',            variant: "ks-activity type_ks-build"},
+                    craftFilter:     {enabled: false, filter: true, label: 'Crafting',            variant: "ks-activity type_ks-craft"},
+                    upgradeFilter:   {enabled: false, filter: true, label: 'Upgrading',           variant: "ks-activity type_ks-upgrade"},
+                    researchFilter:  {enabled: false, filter: true, label: 'Researching',         variant: "ks-activity type_ks-research"},
+                    tradeFilter:     {enabled: false, filter: true, label: 'Trading',             variant: "ks-activity type_ks-trade"},
+                    huntFilter:      {enabled: false, filter: true, label: 'Hunting',             variant: "ks-activity type_ks-hunt"},
+                    praiseFilter:    {enabled: false, filter: true, label: 'Praising',            variant: "ks-activity type_ks-praise"},
+                    faithFilter:     {enabled: false, filter: true, label: 'Order of the Sun',    variant: "ks-activity type_ks-faith"},
+                    festivalFilter:  {enabled: false, filter: true, label: 'Festivals',           variant: "ks-activity type_ks-festival"},
+                    starFilter:      {enabled: false, filter: true, label: 'Astronomical Events', variant: "ks-activity type_ks-star"},
+                    miscFilter:      {enabled: false, filter: true, label: 'Miscellaneous',       variant: "ks-activity"}
                 }
             },
             resources: {
